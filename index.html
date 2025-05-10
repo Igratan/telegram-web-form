@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=koi8-r">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.61">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ru"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;title&gt;Форма Telegram&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;script src="https://telegram.org/js/telegram-web-app.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>font-family: sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>}</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>}</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>input {</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>padding: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>}</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>background-color: #3390ec;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>}</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;h2&gt;Регистрация&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;form id="user-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;label&gt;Имя:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;input type="text" name="name" required /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;label&gt;Email:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;input type="email" name="email" required /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;label&gt;Телефон (в формате +79001234567):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;input type="tel" name="phone" pattern="^\+\d{10,15}$" required /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;button type="submit"&gt;Отправить&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>const tg = window.Telegram.WebApp;</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>tg.expand(); // Расширяем окно</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>document.getElementById("user-form").addEventListener("submit", function (e) {</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>e.preventDefault();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>const formData = new FormData(this);</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>const data = {</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; </span>name: formData.get("name"),</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; </span>email: formData.get("email"),</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; </span>phone: formData.get("phone"),</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>// Передаём данные обратно в Telegram (если бот ожидает)</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>tg.sendData(JSON.stringify(data)); // &lt;- если ты слушаешь это в боте</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>tg.close(); // Закрыть форму</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>});</p>
+<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
