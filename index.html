@@ -106,6 +106,13 @@
           phone: formData.get("phone")
         };
 
+        // Проверка на пустые поля
+        if (!data.name || !data.email || !data.phone) {
+          logError("Пожалуйста, заполните все поля.");
+          alert("Пожалуйста, заполните все поля.");
+          return;
+        }
+
         try {
           // Отправка данных обратно в Telegram
           tg.sendData(JSON.stringify(data));
@@ -120,3 +127,4 @@
 </body>
 
 </html>
+
