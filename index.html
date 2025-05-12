@@ -113,13 +113,23 @@
           return;
         }
 
-        try {
-          // Отправка данных обратно в Telegram
-          tg.sendData(JSON.stringify(data));
+        // Отправка данных на сервер для записи в таблицу и отправки в Telegram
+        fetch('server.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `name=${encodeURIComponent(data.name)}&email=${encodeURIComponent(data.email)}&phone=${encodeURIComponent(data.phone)}`
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Закрытие WebApp и уведомление о успешной отправке
+          tg.sendData(JSON.stringify(data)); // Отправка данных в Telegram
           tg.close(); // Закрытие WebApp после отправки данных
-        } catch (error) {
-          logError("Ошибка при отправке данных: " + error.message);
-        }
+        })
+        .catch(error => {
+          logError("Ошибка при отправке данных на сервер: " + error.message);
+        });
       });
     }
   </script>
@@ -127,4 +137,5 @@
 </body>
 
 </html>
+
 
